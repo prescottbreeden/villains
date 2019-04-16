@@ -1,0 +1,40 @@
+@model Home
+
+<h1>Welcome @Model.Villain.FirstName @Model.Villain.LastName</h1>
+
+<p>Would you like to create a new plan for world domination?</p>
+
+<partial name="_newPlan" model="@Model.NewPlan" />
+
+
+<hr>
+
+@{
+  foreach(Plan p in @Model.AllPlans)
+  {
+    <a href="">@p.Content</a><br>
+  }
+}
+
+<hr>
+
+@{
+  foreach(EvilGroup eg in @Model.AllGroups)
+  {
+    <p>
+      @eg.Name |
+      <a href="/add/@eg.EvilGroupId">Join Group</a>
+    </p> 
+  }
+}
+
+@{
+  foreach(var eg in @Model.Villain.VillainEvilGroups)
+  {
+    <p>
+      @eg.EvilGroup.Name |
+      <a href="">I quit</a>
+    </p> 
+
+  }
+}

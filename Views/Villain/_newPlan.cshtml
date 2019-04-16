@@ -1,0 +1,20 @@
+@model NewPlan
+
+<form asp-action="NewPlan" asp-controller="Villain" method="POST">
+  <div class="input">
+    <span class="error" asp-validation-for="Content"></span>
+    <label asp-for="Content">Content</label>
+    <input asp-for="Content">
+  </div>
+  <div class="input">
+    <span class="error" asp-validation-for="Cost"></span>
+    <label asp-for="Cost">Cost</label>
+    <input asp-for="Cost">
+  </div>
+  <div class="input">
+    <span class="error" asp-validation-for="Duration"></span>
+    <label asp-for="Duration">Duration</label>
+    <input asp-for="Duration">
+  </div>
+  <button>Add Plan</button>
+</form>

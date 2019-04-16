@@ -1,0 +1,10 @@
+@model NewGroup
+
+<form asp-action="NewGroup" asp-controller="Villain" method="POST">
+  <div class="input">
+    <span class="error" asp-validation-for="Name"></span>
+    <label asp-for="Name">Name</label>
+    <input asp-for="Name">
+  </div>
+  <button>Add Group</button>
+</form>
